@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            line-height: 200px;
+            color: rgb(27, 180, 86);
+            font-size: 30px;
+            text-align: center;
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+    //     function ti () { var time1 = new Date('2019/02/13 12:50:30'), time2 = new Date();
+    // var time = time1 - time2;
+    // var a = parseInt(time / 1000),
+    //  s = parseInt(a % 60), 
+    //  b = parseInt(a / 60), 
+    //  min = parseInt(b % 60), 
+    //  hrou = parseInt(b / 60);
+    // console.log(hrou + '小时' + min + '分钟' + s + '秒')
+    // }
+        var div = document.querySelector('div');
+   var n = function () {
+       var time1 = new Date('2019/04/29 12:50:30'),
+        time2 = new Date(); 
+    console.log(time1)
+    console.log(time2)
+
+        var time = time1 - time2;
+        console.log(time)
+        var a = parseInt(time / 1000),
+        s = parseInt(a % 60), 
+        b = parseInt(a / 60), 
+        min = parseInt(b % 60), 
+        hrou = parseInt(b / 60);
+        // console.log(hrou + '小时' + min + '分钟' + s + '秒')
+        end = '倒计时：' + hrou + '小时' + min + '分钟' + s + '秒';
+        return end;
+        }
+     function ov (){
+       var y = n();
+        div.innerText = y;
+     }  
+    //  ov()
+  window.setInterval(ov,1000);
+    </script>
+    
+</body>
+</html>
